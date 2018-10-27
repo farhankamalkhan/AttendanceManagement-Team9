@@ -37,5 +37,20 @@ Verify The User Can View All The Options Under Attendance Management
 Verify The User Can View Their Own Attendance For The Current Month
     [Documentation]     As a user I want to be able to view my own attendance
     Click Element       id=viewAttendance
-    Element Should Contain  class=link    ${name}
+    Wait Until Element Is Visible  css=div.col-md-12:nth-child(5)   ${timeout}
+
+Verify The User Can View Attendance Monthly Sheet
+    [Documentation]     As a user I want to be able to view attendance monthly sheet
+    Click Element       id=attendanceMonthlySheet
+    Wait Until Element Is Visible  class=pdfColor   ${timeout}
+
+Verify The User Can View Attendance Summary Sheet
+    [Documentation]     As a user I want to be able to view attendance monthly sheet
+    Click Element       id=attendanceSummarySheet
+    Wait Until Element Is Visible  class=input-group   ${timeout}
+
+Verify The User Can View The Adjust Attendance Page
+    [Documentation]     As a user I want to be able to view the adjust attendance page
+    Click Element       id=adjustAttendance
+    Wait Until Element Is Visible  class=btn-primary   ${timeout}
 
