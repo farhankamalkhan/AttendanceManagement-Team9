@@ -6,5 +6,6 @@ config = {
     "pass": "10pearls1+",
     "speed": "1",
     "timeout": "60s",
-    "timeout2": "80s"
+    "timeout2": "80s",
+    "allManagers": "All Managers",
     }
