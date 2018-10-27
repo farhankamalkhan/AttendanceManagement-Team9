@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181027 13:20:47.721" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/farhankamalkhan/AttendanceManagement-Team9/AttendanceManagement-Team9.robot" id="s1" name="AttendanceManagement-Team9">
+<test id="s1-t1" name="Verify The User Can Login With Valid Credentials">
+<kw name="Go To Login Page" library="LoginResource">
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${speed}</arg>
+</arguments>
+<status status="PASS" endtime="20181027 13:20:47.824" starttime="20181027 13:20:47.824"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20181027 13:20:47.825" level="INFO">Opening browser 'Firefox' to base url 'http://10.0.0.165:8080/#/home'.</msg>
+<status status="PASS" endtime="20181027 13:20:54.284" starttime="20181027 13:20:47.825"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20181027 13:20:56.796" starttime="20181027 13:20:54.285"></status>
+</kw>
+<status status="PASS" endtime="20181027 13:20:56.797" starttime="20181027 13:20:47.823"></status>
+</kw>
+<kw name="Input Username" library="LoginResource">
+<arguments>
+<arg>${userName}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=inputUsername</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20181027 13:20:56.800" level="INFO">Typing text 'league9' into text field 'id=inputUsername'.</msg>
+<status status="PASS" endtime="20181027 13:20:59.900" starttime="20181027 13:20:56.799"></status>
+</kw>
+<status status="PASS" endtime="20181027 13:20:59.901" starttime="20181027 13:20:56.797"></status>
+</kw>
+<kw name="Input Password" library="LoginResource">
+<arguments>
+<arg>${pass}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=inputPassword</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20181027 13:20:59.903" level="INFO">Typing text '10pearls1+' into text field 'id=inputPassword'.</msg>
+<status status="PASS" endtime="20181027 13:21:02.991" starttime="20181027 13:20:59.902"></status>
+</kw>
+<status status="PASS" endtime="20181027 13:21:02.991" starttime="20181027 13:20:59.901"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id=login-button</arg>
+</arguments>
+<msg timestamp="20181027 13:21:02.992" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" endtime="20181027 13:21:08.283" starttime="20181027 13:21:02.992"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=authorTitle</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20181027 13:21:27.693" starttime="20181027 13:21:08.284"></status>
+</kw>
+<doc>As a user I want to be able to login to the webpage</doc>
+<status status="PASS" endtime="20181027 13:21:27.693" critical="yes" starttime="20181027 13:20:47.822"></status>
+</test>
+<test id="s1-t2" name="Verify The User Can Go To The Dashboard">
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>class=dropLink</arg>
+</arguments>
+<msg timestamp="20181027 13:21:27.696" level="INFO">Simulating Mouse Over on element 'class=dropLink'.</msg>
+<status status="PASS" endtime="20181027 13:21:30.039" starttime="20181027 13:21:27.695"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=viewPro-icon</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20181027 13:21:32.062" starttime="20181027 13:21:30.040"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=viewPro-icon</arg>
+</arguments>
+<msg timestamp="20181027 13:21:32.064" level="INFO">Clicking element 'id=viewPro-icon'.</msg>
+<status status="PASS" endtime="20181027 13:21:34.739" starttime="20181027 13:21:32.063"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=ng-scope</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20181027 13:21:36.876" starttime="20181027 13:21:34.740"></status>
+</kw>
+<doc>As a user I want to be able to open my Dashboard</doc>
+<status status="PASS" endtime="20181027 13:21:36.877" critical="yes" starttime="20181027 13:21:27.694"></status>
+</test>
+<test id="s1-t3" name="Verify The User Can View All The Options Under Attendance Management">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=attendance</arg>
+</arguments>
+<msg timestamp="20181027 13:21:36.881" level="INFO">Clicking element 'id=attendance'.</msg>
+<status status="PASS" endtime="20181027 13:21:39.268" starttime="20181027 13:21:36.880"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=viewAttendance</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20181027 13:21:41.302" starttime="20181027 13:21:39.269"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=attendanceMonthlySheet</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20181027 13:21:43.332" starttime="20181027 13:21:41.303"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=attendanceSummarySheet</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20181027 13:21:45.350" starttime="20181027 13:21:43.333"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=adjustAttendance</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20181027 13:21:47.367" starttime="20181027 13:21:45.350"></status>
+</kw>
+<doc>As a user I want to be able to view Attendance Management options</doc>
+<status status="PASS" endtime="20181027 13:21:47.368" critical="yes" starttime="20181027 13:21:36.879"></status>
+</test>
+<test id="s1-t4" name="Verify The User Can View Their Own Attendance For The Current Month">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=viewAttendance</arg>
+</arguments>
+<msg timestamp="20181027 13:21:47.371" level="INFO">Clicking element 'id=viewAttendance'.</msg>
+<status status="PASS" endtime="20181027 13:21:49.598" starttime="20181027 13:21:47.370"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=div.col-md-12:nth-child(5)</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20181027 13:21:51.622" starttime="20181027 13:21:49.599"></status>
+</kw>
+<doc>As a user I want to be able to view my own attendance</doc>
+<status status="PASS" endtime="20181027 13:21:51.623" critical="yes" starttime="20181027 13:21:47.369"></status>
+</test>
+<test id="s1-t5" name="Verify The User Can View Attendance Monthly Sheet">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=attendanceMonthlySheet</arg>
+</arguments>
+<msg timestamp="20181027 13:21:51.627" level="INFO">Clicking element 'id=attendanceMonthlySheet'.</msg>
+<status status="PASS" endtime="20181027 13:21:53.875" starttime="20181027 13:21:51.626"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=pdfColor</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20181027 13:21:57.255" starttime="20181027 13:21:53.876"></status>
+</kw>
+<doc>As a user I want to be able to view attendance monthly sheet</doc>
+<status status="PASS" endtime="20181027 13:21:57.256" critical="yes" starttime="20181027 13:21:51.625"></status>
+</test>
+<test id="s1-t6" name="Verify The User Can View Attendance Summary Sheet">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=attendanceSummarySheet</arg>
+</arguments>
+<msg timestamp="20181027 13:21:57.260" level="INFO">Clicking element 'id=attendanceSummarySheet'.</msg>
+<status status="PASS" endtime="20181027 13:21:59.461" starttime="20181027 13:21:57.259"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=input-group</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20181027 13:22:01.486" starttime="20181027 13:21:59.462"></status>
+</kw>
+<doc>As a user I want to be able to view attendance monthly sheet</doc>
+<status status="PASS" endtime="20181027 13:22:01.487" critical="yes" starttime="20181027 13:21:57.257"></status>
+</test>
+<test id="s1-t7" name="Verify The User Can View The Adjust Attendance Page">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=adjustAttendance</arg>
+</arguments>
+<msg timestamp="20181027 13:22:01.490" level="INFO">Clicking element 'id=adjustAttendance'.</msg>
+<status status="PASS" endtime="20181027 13:22:04.328" starttime="20181027 13:22:01.489"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=btn-primary</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20181027 13:22:06.362" starttime="20181027 13:22:04.328"></status>
+</kw>
+<doc>As a user I want to be able to view the adjust attendance page</doc>
+<status status="PASS" endtime="20181027 13:22:06.363" critical="yes" starttime="20181027 13:22:01.488"></status>
+</test>
+<status status="PASS" endtime="20181027 13:22:06.367" starttime="20181027 13:20:47.723"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="7">Critical Tests</stat>
+<stat fail="0" pass="7">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="AttendanceManagement-Team9" pass="7">AttendanceManagement-Team9</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
